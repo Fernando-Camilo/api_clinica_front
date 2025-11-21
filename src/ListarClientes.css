@@ -1,0 +1,19 @@
+.lista-clientes-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titulo-lista {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.lista-vazia {
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+    margin-top: 20px;
+}

@@ -1,0 +1,91 @@
+.formulario-container {
+  width: 380px;
+  margin: 40px auto;
+  padding: 28px;
+  background: #fdfdfd;
+  border-radius: 16px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  animation: fadeIn 0.4s ease;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.formulario-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 22px;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #555;
+}
+
+form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  font-size: 1rem;
+  transition: 0.25s ease;
+}
+
+form input:focus {
+  border-color: #0077ff;
+  background: white;
+  box-shadow: 0 0 4px rgba(0,119,255,0.4);
+  outline: none;
+}
+
+form button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 1rem;
+}
+
+form button:hover {
+  background: #005fcc;
+  transform: translateY(-2px);
+}
+
+form button:nth-of-type(2) {
+  background: #d9534f;
+  margin-top: 6px;
+}
+
+form button:nth-of-type(2):hover {
+  background: #c9302c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
