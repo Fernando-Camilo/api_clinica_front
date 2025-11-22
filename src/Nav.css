@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+* {
+    font-family: "Delius", cursive;
+}
+nav {
+    padding: 1rem 5rem;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: #00ffff;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #ffce09;
+    text-shadow: #000 0 0 5px;
+}
+nav img {
+    width: 4rem;
+}
+nav a, nav a:visited {
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-right: 3rem;
+    color: #ff0000;
+}
+nav a:hover {
+    color: #fff319;
+    text-shadow: #000 0 0 5px;
+}
+nav a:first-of-type {
+    margin-right: 2rem;
+}
+nav a:nth-of-type(2) {
+    margin-left: 7rem;
+}
+nav button {
+    margin-right: 1rem;
+    padding: 6px 12px;
+    border: none;
+    background-color: #e03838;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+nav button:hover {
+    background-color: #ff0000;
+}

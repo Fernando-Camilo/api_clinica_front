@@ -1,22 +1,37 @@
 .cliente-card {
     background: #f4f4f4;
     border: 1px solid #ccc;
-    padding: 16px;
+    padding: 2rem 3rem;
     margin: 12px 0;
     border-radius: 6px;
+    width: 50%;
 }
 
 .cliente-card h3 {
     margin-top: 0;
+    font-size: 1.3rem;
+}
+
+
+.cliente-card div {
+    font-size: 1.1rem;
+}
+.cliente-card div:first-of-type {
+    margin-bottom: 0.5rem;
+}
+
+.cliente-card div:last-of-type {
+    margin-bottom: 1rem;
 }
 
 .cliente-card button {
-    margin-right: 10px;
+    margin-right: 1rem;
     padding: 6px 12px;
     border: none;
     background-color: #0056b3;
     color: white;
     border-radius: 4px;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 
