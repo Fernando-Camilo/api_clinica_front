@@ -5,6 +5,7 @@ export default function CriarCliente({
     incluirCliente,
     alterarCliente,
     alterando,
+    onCancelarAlteracao,
     id,
     nomeAlt,
     emailAlt,
@@ -45,7 +46,7 @@ export default function CriarCliente({
     }
 
     return (
-        <>
+        <div className="formulario-container">
             <h2>{alterando ? "Alterar" : "Cadastrar"} Cliente</h2>
 
             <form onSubmit={processarEnvio}>
@@ -90,12 +91,13 @@ export default function CriarCliente({
                             setNome("");
                             setEmail("");
                             setTelefone("");
+                            onCancelarAlteracao();
                         }}
                     >
                         Cancelar
                     </button>
                 )}
             </form>
-        </>
+        </div>
     );
 }

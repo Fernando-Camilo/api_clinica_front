@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
+import './App.css';
 import axios from "axios";
 import ListaClientes from "./ListarClientes";
 import CriarCliente from "./CriarCliente";
+import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import Nav from "./Nav.jsx";
+import Home from "./Home.jsx";
 
-function App() {
+const ClienteContainer = () => {
+
+  const navigate = useNavigate();
+
   const [clientes, setClientes] = useState([]);
   const [atualizacao, setAtualizacao] = useState(0);
   const [alterando, setAlterando] = useState(false);
@@ -91,26 +98,63 @@ function App() {
     setNomeAlterando(nome);
     setEmailAlterando(email);
     setTelefoneAlterando(telefone);
+
+    navigate('/form');
+  }
+
+  // Cancelar alteração
+  function cancelarAlteracao() {
+    setAlterando(false);
+    navigate('/lista');
   }
 
   return (
-    <div>
-      <CriarCliente
-        incluirCliente={incluirCliente}
-        alterarCliente={alterarCliente}  
-        alterando={alterando}
-        id={idAlterando}
-        nomeAlt={nomeAlterando}
-        emailAlt={emailAlterando}
-        telefoneAlt={telefoneAlterando}
+    <>
+      
+      <Nav 
+        alterando={alterando} 
+        onCancelarAlteracao={cancelarAlteracao}
       />
 
-      <ListaClientes
-        clientes={clientes}
-        excluirCliente={excluirCliente}
-        iniciarAlteracao={iniciarAlteracao}
-      />
-    </div>
+      <div>
+        <Routes>
+
+          <Route path="/" element={ < Home /> } />
+
+          <Route path="/form" element={
+            <CriarCliente
+                incluirCliente={incluirCliente}
+                alterarCliente={alterarCliente}
+                alterando={alterando}
+                onCancelarAlteracao={cancelarAlteracao}
+                id={idAlterando}
+                nomeAlt={nomeAlterando}
+                emailAlt={emailAlterando}
+                telefoneAlt={telefoneAlterando}
+            />
+          }/>
+
+          <Route path="/lista" element={
+            <ListaClientes
+                clientes={clientes}
+                excluirCliente={excluirCliente}
+                iniciarAlteracao={iniciarAlteracao}
+            />
+          } />
+        
+          <Route path="*" element={<h1>404 - Página Não Encontrada</h1>} />
+
+        </Routes>
+      </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+        <ClienteContainer />
+    </BrowserRouter>
   );
 }
 

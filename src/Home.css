@@ -1,0 +1,40 @@
+main {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 2rem 0;
+}
+main h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #ffce09;
+    text-shadow: #000 0 0 5px;
+}
+main img {
+    width: 5rem;
+    margin-right: 2rem;
+}
+
+main .line {
+    margin-top: 3rem;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
+
+main article {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}
+
+main p {
+    font-size: 1.9rem;
+}
+li::marker {
+    color: #ffce09;
+}
+li {
+    font-weight: bold;
+}
